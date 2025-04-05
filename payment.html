@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Hamro Bike</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-motorcycle"></i> Hamro Bike
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#booking">Booking</a></li>
+                <li><a href="#payment">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="payment-section">
+            <h2>Complete Your Payment</h2>
+            <p class="payment-info">Please select a payment method to finalize your bike rental payment.</p>
+
+            <!-- Payment Options -->
+            <div class="payment-options">
+                <h3>Select Payment Method</h3>
+                <div class="payment-method">
+                    <input type="radio" id="esewa" name="payment-method" value="esewa" checked>
+                    <label for="esewa">
+                        <img src="https://esewa.com.np/common/images/esewa-logo.png" alt="eSewa" class="payment-logo">
+                        Pay with eSewa
+                    </label>
+                    <div class="qr-code">
+                        <img src="photo/fakeqr.png" alt="eSewa QR Code" class="qr-image">
+                        <p>Scan to pay with eSewa</p>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" id="khalti" name="payment-method" value="khalti">
+                    <label for="khalti">
+                        <img src="photo/k3.png" alt="Khalti" class="payment-logo">
+                        Pay with Khalti
+                    </label>
+                    <div class="qr-code">
+                        <img src="photo/fakeqr.png" alt="Khalti QR Code" class="qr-image">
+                        <p>Scan to pay with Khalti</p>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <input type="radio" id="bank" name="payment-method" value="bank">
+                    <label for="bank">
+                        <i class="fas fa-university payment-icon"></i>
+                        Pay via Bank Transfer
+                    </label>
+                    <div class="qr-code">
+                        <img src="photo/fakeqr.png" alt="Bank QR Code" class="qr-image">
+                        <p>Scan to pay via Bank Transfer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <form action="#" method="POST" class="payment-form">
+                <div class="form-group">
+                    <label for="phone">Phone Number (Linked to Payment Account)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., 98XXXXXXXX" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount (Rs.)</label>
+                    <input type="number" id="amount" name="amount" value="6444" readonly>
+                </div>
+                <button type="submit" class="pay-btn">Proceed to Pay <i class="fas fa-arrow-right"></i></button>
+            </form>
+
+            <p class="payment-note">Note: You will be redirected to the selected payment gateway to complete the transaction, or scan the QR code to pay directly.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Hamro Bike. All rights reserved. | <a href="#contact">Contact Us</a></p>
+    </footer>
+</body>
+</html>

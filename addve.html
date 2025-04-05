@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Vehicle for Rent - Hamro Bike</title>
+    <link rel="stylesheet" href="addve.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-motorcycle"></i> Hamro Bike
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="submit-vehicle-form">
+            <h2>Submit Your Vehicle for Rent</h2>
+            <p class="form-info">Interested in renting out your bike? Fill out the details below, and we'll get in touch!</p>
+            <form action="#" method="POST" enctype="multipart/form-data" id="submit-form">
+                <!-- User Details -->
+                <div class="form-group">
+                    <label for="user-name">Your Full Name</label>
+                    <input type="text" id="user-name" name="user-name" placeholder="e.g., John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">Licence No.</label>
+                    <input type="tel" id="user-phone" name="user-phone" placeholder="e.g., 98XXXXXXXX" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">Bill Book No.</label>
+                    <input type="tel" id="user-phone" name="user-phone" placeholder="e.g., 98XXXXXXXX" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">Citizenship No.</label>
+                    <input type="tel" id="user-phone" name="user-phone" placeholder="e.g., 98XXXXXXXX" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-license">Upload Your Driver's License</label>
+                    <input type="file" id="user-license" name="user-license" accept="image/*,application/pdf" required>
+                    <p class="file-note">Accepted formats: JPG, PNG, PDF</p>
+                </div>
+                <!-- Bike Details -->
+                <div class="form-group">
+                    <label for="bike-model">Bike Model</label>
+                    <input type="text" id="bike-model" name="bike-model" placeholder="e.g., Yamaha Scrambler" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bike-price">Expected Rent Price (Rs. per day)</label>
+                    <input type="number" id="bike-price" name="bike-price" placeholder="e.g., 3222" min="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="bike-image">Upload Bike Image</label>
+                    <input type="file" id="bike-image" name="bike-image" accept="image/*" required>
+                    <p class="file-note">Accepted formats: JPG, PNG</p>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Vehicle <i class="fas fa-plus"></i></button>
+                    <button type="button" class="cancel-btn">Cancel <i class="fas fa-times"></i></button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Hamro Bike. All rights reserved. | <a href="#contact">Contact Us</a></p>
+    </footer>
+</body>
+</html>

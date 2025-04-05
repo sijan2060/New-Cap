@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+    animation: spin 4s infinite linear;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input[type="text"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    font-size: 14px;
+    width: 180px;
+    transition: width 0.4s ease;
+}
+
+.search-form input[type="text"]:focus {
+    width: 220px;
+    outline: none;
+}
+
+.search-form button {
+    padding: 10px 15px;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #e67e22;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('https://source.unsplash.com/1600x900/?motorcycle,adventure') no-repeat center/cover;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #878a05;
+    
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Booking Form */
+.booking-form {
+    flex: 1;
+    min-width: 320px;
+    max-width: 380px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.booking-form h2 {
+    font-size: 28px;
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.booking-form label {
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.booking-form select, .booking-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form select:focus, .booking-form input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+    outline: none;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 14px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.booking-form button:hover {
+    background: #218838;
+    transform: translateY(-3px);
+}
+
+.booking-form button i {
+    margin-left: 10px;
+}
+
+/* Terms */
+.terms {
+    flex: 2;
+    min-width: 320px;
+    max-width: 700px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.terms h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.terms ul {
+    list-style: none;
+    font-size: 15px;
+    color: #7f8c8d;
+}
+
+.terms ul li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.terms ul li:before {
+    content: "✔";
+    color: #28a745;
+    position: absolute;
+    left: 0;
+}
+
+.terms strong {
+    color: #2c3e50;
+}
+
+/* Vehicle Details */
+.vehicle-details {
+    flex: 1;
+    min-width: 320px;
+    max-width: 380px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.vehicle-details h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.bike-card {
+    animation: slideUp 1s ease-in-out;
+}
+
+.vehicle-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.vehicle-details img:hover {
+    transform: scale(1.05);
+}
+
+.vehicle-details ul {
+    list-style: none;
+    font-size: 15px;
+    color: #7f8c8d;
+}
+
+.vehicle-details ul li {
+    margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    font-size: 14px;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e67e22;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search-form input[type="text"] {
+        width: 100%;
+    }
+
+    .search-form input[type="text"]:focus {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .booking-form, .terms, .vehicle-details {
+        max-width: 100%;
+    }
+}

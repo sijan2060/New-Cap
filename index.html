@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-motorcycle"></i> Hamro Bike
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="editve.html">Edit</a></li>
+                <li class="search-container">
+                    <form action="#" method="GET" class="search-form">
+                        <input type="text" placeholder="Search bikes..." name="search" id="search" aria-label="Search bikes">
+                        <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section --> 
+        <section class="hero">
+            <h1>Ride the Ultimate Adventure</h1>
+            <p>Explore Nepal with Hamro Bike – your journey starts here!</p>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="booking-form" id="booking">
+            <h2>Book Your Ride Now</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="pickup">Pick-up Location</label>
+                    <select id="pickup" name="pickup" required>
+                        <option value="" disabled selected>Select Pick-up Location</option>
+                        <option value="kathmandu">Kathmandu</option>
+                        <option value="pokhara">Pokhara</option>
+                        <option value="chitwan">Chitwan</option>
+                        <option value="Mustang">Mustang</option>
+                        <option value="Namche">Namche</option>
+                        <option value="Mugu">Mugu</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dropoff">Drop-off Location</label>
+                    <select id="dropoff" name="dropoff" required>
+                        <option value="" disabled selected>Select Drop-off Location</option>
+                        <option value="kathmandu">Kathmandu</option>
+                        <option value="pokhara">Pokhara</option>
+                        <option value="chitwan">Chitwan</option>
+                        <option value="Mustang">Mustang</option>
+                        <option value="Namche">Namche</option>
+                        <option value="Mugu">Mugu</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickup-date">Pick-up Date</label>
+                    <input type="date" id="pickup-date" name="pickup-date" min="2025-04-03" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dropoff-date">Drop-off Date</label>
+                    <input type="date" id="dropoff-date" name="dropoff-date" min="2025-04-04" required>
+                </div>
+
+                <button type="submit">Book Now <i class="fas fa-arrow-right"></i></button>
+            </form>
+        </section>
+
+        <!-- Terms and Conditions Section -->
+        <section class="terms">
+            <h2>Rental Terms & Conditions</h2>
+            <ul>
+                <li><strong>Eligibility:</strong> Minimum age 21 with a valid driver’s license. International renters require an IDP.</li>
+                <li><strong>Booking & Payment:</strong> Book via website or agents. Full payment due at booking (cards/online accepted).</li>
+                <li><strong>Rental Period:</strong> Minimum 24 hours. Late returns incur hourly fees. Extensions need prior approval.</li>
+                <li><strong>Usage:</strong> Public roads only. No off-road, racing, or illegal use.</li>
+                <li><strong>Insurance & Liability:</strong> Basic insurance included. Renters liable for damage/theft; deposit required.</li>
+                <li><strong>Cancellation:</strong> Full refund 48+ hours prior; 50% charge within 48 hours; no refund for no-shows.</li>
+                <li><strong>Fuel Policy:</strong> Full tank provided and required on return, or a refueling fee applies.</li>
+                <li><strong>Breakdown Assistance:</strong> 24/7 roadside support. No self-repairs allowed.</li>
+                <li><strong>Agreement:</strong> Violation of terms may terminate rental and forfeit deposit.</li>
+            </ul>
+        </section>
+
+        <!-- Vehicle Details Section -->
+        <section class="vehicle-details">
+            <h2>Featured Bike</h2>
+            <div class="bike-card">
+                <img src="photo/Bike1.jpg" alt="Yamaha Scrambler Bike">
+                <ul>
+                    <li><strong>Model:</strong> Yamaha Scrambler</li>
+                    <li><strong>Engine Capacity:</strong> 300 cc</li>
+                    <li><strong>Fuel Type:</strong> Petrol</li>
+                    <li><strong>Rent Price:</strong> Rs. 3222 per day</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Hamro Bike. All rights reserved. | <a href="#contact">Contact Us</a></p>
+    </footer>
+</body>
+</html>
